@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "CookieMonster";
+    src: url("assets/fonts/CookieMonster.ttf") format("ttf") 
+
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("assets/fonts/Roboto/Roboto-Bold.ttf") format("ttf"), sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(#fca2e1,#cd0993 )
+}
+.page-title{
+    color: #f8c7e9;
+    font-family: Cookie-Monster, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+}
+.game-info {
+    color: #f8b0e3;
+    font-size: 2em;
+    font-family: 'Roboto-Bold', serif;
+    
+}
+.game-container-info {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-around;
+}
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+}
+.card {
+    position: relative;
+    
+    height: 175px;
+    width: 126px;
+}
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: pink;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border-width: 3px;
+    border-style: solid;
+    transition: transform 500ms ease-in-out;
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+    overflow: hidden;
+}
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+.card.matched .card-front .card-value {
+    animation: dance 1s infinite 500ms ease-in-out;
+
+}
+@keyframes dance {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(30deg);
+    }
+}
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: background-color 500ms, font-size 500ms;
+}
+.overlay-text-small {
+    font-size: .3em;
+}
+.overlay-text.visible {
+    display: flex;
+    
+    animation: overlay-grow 500ms forwards;
+}
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0, .8);
+        font-size: 8em;
+    }
+}
+.card-back {
+    background-color: pink;
+    border-color: #cd0993;
+}
+.card-front {
+    transform: rotateX(180deg);
+    background-color: #ffe9ec;
+    transform: rotateY(180deg);
+}
+.card-value{
+    position: relative;
+    transform: scale(.9);
+    transition: transform 100ms ease-in-out;
+}
+.card-front:hover .card-value {
+    transform: scale(1);
+}
+.red-heart {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+.card-face:hover .red-heart {
+    width: 47px;
+    height: 47px;
+}
+.red-heart-top-left {
+    top: 0;
+    left: 0;
+}
+.red-heart-top-right {
+    top: 0;
+    right: 0;
+}
+.red-heart-bottom-left {
+    bottom: 0;
+    left: 0;
+  
+}
+.red-heart-bottom-right {
+    bottom: 0;
+    right: 0;
+}
+.love-letters {
+    align-items: center;
+    transform: rotateX(-20deg);
+    transition: align-items 100ms ease-in-out;
+}
+.card-back:hover .love-letters {
+    transform: translateY(0);
+}
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
+    .game-container-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}

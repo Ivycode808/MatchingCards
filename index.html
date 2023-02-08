@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" async></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Matching Cards Game</title>
+</head>
+<body>
+    <h1 class="page-title">Matching Card Game</h1>
+    <div class="overlay-text visible">
+        Click to Start Game
+    </div>
+    <div id="gameover-text" class="overlay-text">
+        Game Over
+        <span class="overlay-text-small">Wanna Restart?</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        Victory!
+        <span class="overlay-text-small">Wanna Restart?</span>
+    </div>
+</div>
+    <div class="game-container">
+        <div class="game-container-info ">
+            <div class="game-info">
+             Time   <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Flips   <span id="flips">0</span>
+               </div>
+            
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+        </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-trust-50.png">
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-trust-50.png">
+        </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-romance-50.png">
+        </div>
+        </div>
+        
+        <div class="card ">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-love-mail-50.png">
+        </div>
+        
+        </div>
+        <div class="card ">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-romance-50.png">
+        </div>
+        </div>
+        
+        <div class="card ">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-love-mail-50.png">
+        </div>
+        </div>
+        
+        <div class="card ">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-wedding-day-60.png">
+        </div>
+        </div>
+        
+        <div class="card ">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-wedding-day-60.png">
+        </div>
+        </div>
+        
+        <div class="card ">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-cupid-target-60.png">
+        </div>
+        </div>
+        
+        <div class="card ">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-cupid-target-60.png">
+        </div>
+        </div>
+        
+        <div class="card ">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-small-hearts-50.png">
+        </div>
+        </div>
+        
+        <div class="card ">
+            <div class="card-back card-face">
+             <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+             <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+            </div>
+        <div class="card-front card-face">
+            <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+             <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+             <img class="card-value" src="assets/icons/icons8-small-hearts-50.png">
+        </div>
+        </div>
+            <div class="card ">
+                <div class="card-back card-face">
+                 <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+                 <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+                 <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+                 <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+                 <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+                </div>
+            <div class="card-front card-face">
+                <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+                 <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+                 <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+                 <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+                 <img class="card-value" src="assets/icons/icons8-two-hearts-50.png">
+            </div>
+            </div>
+                <div class="card ">
+                    <div class="card-back card-face">
+                     <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+                     <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+                     <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+                     <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+                     <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+                    </div>
+                <div class="card-front card-face">
+                    <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+                     <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+                     <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+                     <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+                     <img class="card-value" src="assets/icons/icons8-two-hearts-50.png">
+            </div>
+            </div>
+            
+            <div class="card ">
+                <div class="card-back card-face">
+                 <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+                 <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+                 <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+                 <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+                 <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+                </div>
+            <div class="card-front card-face">
+                <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+                 <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+                 <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+                 <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+                 <img class="card-value" src="assets/icons/icons8-love-arrow-50.png">
+            </div>
+            </div>
+                    <div class="card ">
+                        <div class="card-back card-face">
+                         <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-heart-30.png">
+                         <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+                         <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-heart-30.png"> 
+                         <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-heart-30.png">
+                         <img class="love-letters" src="assets/images/icons8-love-word-64.png">
+                        </div>
+                    <div class="card-front card-face">
+                        <img class="red-heart red-heart-top-left" src="assets/images/icons8-hand-drawn-pink.png">
+                         <img class="red-heart red-heart-top-right" src="assets/images/icons8-hand-drawn-pink.png">
+                         <img class="red-heart red-heart-bottom-left" src="assets/images/icons8-hand-drawn-pink.png"> 
+                         <img class="red-heart red-heart-bottom-right" src="assets/images/icons8-hand-drawn-pink.png">
+                         <img class="card-value" src="assets/icons/icons8-love-arrow-50.png">
+            </div>        
+            </div>
+            
+              
+       
+    </div>
+</body>
+</html>
